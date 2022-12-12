@@ -186,7 +186,7 @@ void *process_chunks_on_gpu(void *vinput) {
     return NULL;
 }
 
-void sieve(uint64_t m) {
+unsignedlong sieve(uint64_t m) {
     double dm = (double) m;
     uint64_t upper_bound = (uint64_t) (dm * log(dm)) + (dm * log(log(dm)));
     uint64_t chunk_size = (uint64_t) sqrt((double) upper_bound);
@@ -275,6 +275,7 @@ found_chunk:
 
 cleanup:
     free(seed_primes);
+    return 22;
 }
 
 int main() {
