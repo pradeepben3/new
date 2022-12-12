@@ -278,7 +278,7 @@ cleanup:
     return chunks_per_gpu;
 }
 
-uint64_t main() {
+uint64_t main(void) {
     struct timeval tv1, tv2;
     gettimeofday(&tv1, NULL);
     sieve(1e9);
